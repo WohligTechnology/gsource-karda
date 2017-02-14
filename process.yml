@@ -2,4 +2,4 @@ apps:
   - script: "app.js"
     name: "GSource-81"
     watch: true
-    args: "--prod"
+    args: ""
