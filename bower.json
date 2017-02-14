@@ -220,21 +220,5 @@
       "main": "./dist/leaflet-heat.js"
     }
   },
-  "appPath": "app",
-  "resolutions": {
-    "angular": "1.5.0",
-    "bootstrap": "~3.3.5",
-    "rickshaw": "~1.5.1",
-    "jquery": ">= 1.9.0",
-    "d3": "~3.5.6",
-    "bootstrap-daterangepicker": "~2.0.11",
-    "moment": ">=2.9.0",
-    "angular-cookies": "1.5.0",
-    "masonry": "4.0.0",
-    "get-size": "~2.0.2",
-    "outlayer": "~2.0.0",
-    "fizzy-ui-utils": "~2.0.0",
-    "imagesloaded": "~4.1.0",
-    "jquery-bridget": "~2.0.0"
-  }
+  "appPath": "app"
 }
