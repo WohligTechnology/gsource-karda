@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "latest",
+    "angular": "~1.5.0",
     "angular-animate": "1.5.0",
     "angular-bootstrap": "1.1.2",
     "angular-bootstrap-colorpicker": "~3.0.19",
@@ -49,7 +49,7 @@
     "angular-translate-storage-local": "~2.9.2",
     "angular-ui-calendar": "~0.8.1",
     "angular-ui-grid": "~3.0.6",
-    "angular-ui-router": "latest",
+    "angular-ui-router": "~0.2.15",
     "angular-ui-select": "~0.14.9",
     "angular-ui-tree": "~2.9.0",
     "angular-ui-utils": "~0.2.3",
@@ -220,5 +220,21 @@
       "main": "./dist/leaflet-heat.js"
     }
   },
-  "appPath": "app"
+  "appPath": "app",
+  "resolutions": {
+    "angular": "1.5.0",
+    "bootstrap": "~3.3.5",
+    "rickshaw": "~1.5.1",
+    "jquery": ">= 1.9.0",
+    "d3": "~3.5.6",
+    "bootstrap-daterangepicker": "~2.0.11",
+    "moment": ">=2.9.0",
+    "angular-cookies": "1.5.0",
+    "masonry": "4.0.0",
+    "get-size": "~2.0.2",
+    "outlayer": "~2.0.0",
+    "fizzy-ui-utils": "~2.0.0",
+    "imagesloaded": "~4.1.0",
+    "jquery-bridget": "~2.0.0"
+  }
 }
