@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.5.0",
+    "angular": "latest",
     "angular-animate": "1.5.0",
     "angular-bootstrap": "1.1.2",
     "angular-bootstrap-colorpicker": "~3.0.19",
@@ -49,7 +49,7 @@
     "angular-translate-storage-local": "~2.9.2",
     "angular-ui-calendar": "~0.8.1",
     "angular-ui-grid": "~3.0.6",
-    "angular-ui-router": "~0.2.15",
+    "angular-ui-router": "latest",
     "angular-ui-select": "~0.14.9",
     "angular-ui-tree": "~2.9.0",
     "angular-ui-utils": "~0.2.3",
