@@ -101,7 +101,7 @@ var app = angular
   }])
 
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-debugger;
+
     $urlRouterProvider.otherwise('/app/dashboard');
     $stateProvider
 
