@@ -53,7 +53,7 @@ app
   //       resolve: {
   //         items: function () {
   //           return $scope.items;
-  //         }
+  //         }  
   //       }
   //     });
 
