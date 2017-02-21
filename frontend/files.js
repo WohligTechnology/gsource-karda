@@ -111,14 +111,14 @@ module.exports = [
     'bower_components/textAngular/dist/textAngular.min.js',
     'bower_components/dragular/dist/dragular.min.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-
-
-
+    
+    
   //Work files //Work files
     'frontend/js/app.js',
     'frontend/js/controllers/main.js',
     'frontend/js/controllers/orders.js',
     'frontend/js/controllers/users.js',
+    'frontend/js/controllers/client.js',
     'frontend/js/controllers/invoices.js',
     'frontend/js/directives/navcollapse.js',
     'frontend/js/directives/slimscroll.js',
@@ -212,6 +212,7 @@ module.exports = [
     'frontend/js/controllers/pages-intro.js',
     'frontend/js/controllers/ui-dragula.js',
     'frontend/js/directives/tilecontrollightbox.js',
+
 
     'frontend/js/controllers/material/autocomplete.js',
     'frontend/js/controllers/material/bottom-sheet.js',

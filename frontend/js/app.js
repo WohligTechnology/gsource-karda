@@ -125,7 +125,23 @@ var app = angular
         //   }]
         // }
       })
-    
+      //charts
+    .state('app.charts', {
+      url: '/charts',
+      controller: 'ChartsCtrl',
+      templateUrl: 'frontend/views/tmpl/charts.html',
+      // resolve: {
+      //   plugins: ['$ocLazyLoad', function($ocLazyLoad) {
+      //     return $ocLazyLoad.load([
+      //       'frontend/js/vendor/flot/jquery.flot.resize.js',
+      //       'frontend/js/vendor/flot/jquery.flot.orderBars.js',
+      //       'frontend/js/vendor/flot/jquery.flot.stack.js',
+      //       'frontend/js/vendor/flot/jquery.flot.pie.js',
+      //       'frontend/js/vendor/gaugejs/gauge.min.js'
+      //     ]);
+      //   }]
+      // }
+    })
     //mail
       .state('app.mail', {
         abstract: true,
@@ -151,6 +167,25 @@ var app = angular
         controller: 'MailSingleCtrl',
         templateUrl: 'frontend/views/tmpl/mail/single.html'
       })
+      //client
+        .state('app.client', {
+        abstract: true,
+        url: '/client',
+        controller: 'clientCtrl',
+        template: '<div ui-view></div>'
+      })
+      //client.requested
+      .state('app.client.requested', {
+        url: '/requested',
+        controller: 'clientCtrl',
+        templateUrl: 'frontend/views/tmpl/clients/requested.html'
+      })
+      //client.moderated
+      .state('app.client.moderated', {
+        url: '/moderated',
+        controller: 'clientCtrl',
+        templateUrl: 'frontend/views/tmpl/clients/moderated.html'
+      })
 
 
     //orders
@@ -159,6 +194,12 @@ var app = angular
         url: '/orders',
         controller: 'orderCtrl',
         template: '<div ui-view></div>'
+      })
+      //order.all
+        .state('app.orders.all-order', {
+        url: '/all-order',
+        controller: 'orderCtrl',
+        templateUrl: 'frontend/views/tmpl/orders/all-order.html'
       })
       //orders.unassigned
       .state('app.orders.unassigned', {

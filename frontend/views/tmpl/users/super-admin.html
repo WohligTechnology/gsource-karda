@@ -1,0 +1,347 @@
+<div class="page page-dashboard">
+  <div class="">
+   <h2>Super Admin Details</h2>
+  </div>
+</div>  
+
+
+<div class="page page-tables-bootstrap">
+
+  <!-- page content -->
+  <div class="pagecontent"  ng-controller="SplashDemoCtrl">
+
+    <!-- row -->
+    <div class="row">
+      <!-- col -->
+      <div class="col-md-12">
+
+        <!-- tile -->
+        <section class="tile" fullscreen="isFullscreen07">
+
+         <!-- tile header -->
+          <div class="tile-header dvd dvd-btm" >
+
+            <h1 class="custom-font"><strong>View Super Admin</strong></h1>
+            
+              <ul class="controls">
+                <li class="create_button">
+                  <!-- tile -->
+                        <div class="" fullscreen="isFullscreen02">
+
+                          <!-- tile body -->
+                          <div class="tile-body">
+
+                            <script type="text/ng-template" id="createClient.html">
+                              <div class="modal-header">
+                                <h3 class="modal-title custom-font">Create Super Admin</h3>
+                              </div>
+                              <div class="modal-body">
+
+                              <!--<p>Hey stupid... You have to make Create user form in order to create user</p>-->
+                              <form role="form">
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter First Name
+                                        </label>
+                                        <input type="text" class="form-control my_input" id="" required/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter Last Name
+                                        </label>
+                                        <input type="text" class="form-control my_input" id="" required/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                
+                                  <div class="form-group">
+                                    <label for="">
+                                      Enter Email
+                                    </label>
+                                    <input type="email" class="form-control my_input" id="" required/>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter DOB
+                                        </label>
+                                        <input type="date" class="form-control my_input" id="" required/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter Mobile
+                                        </label>
+                                        <input type="number" class="form-control my_input" id="" required/>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-default btn-border" ng-click="createUser()">Submit</button>
+                                        <button class="btn btn-default btn-border" ng-click="cancel()">Cancel</button>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </form>
+
+                              </div>
+                              <div class="modal-footer">
+                                <!--<button type="submit" class="btn btn-default btn-border" ng-click="createUser()">Submit</button>
+                                <button class="btn btn-default btn-border" ng-click="cancel()">Cancel</button>-->
+                              </div>
+                            </script>
+
+                            <span><i class="fa fa-plus" ng-click="openSplash($event)" data-options="splash-1 splash-ef-1" data-id="create"></i></span>
+                          
+                          </div>
+                          <!-- /tile body -->
+
+                        </div>
+                  <!-- /tile -->
+                </li>
+                <li class="edit_button">
+                       <!-- tile -->
+                        <div class="" fullscreen="isFullscreen02">
+
+                          <!-- tile body -->
+                          <div class="tile-body">
+
+                            <script type="text/ng-template" id="editClient.html">
+                              <div class="modal-header">
+                                <h3 class="modal-title custom-font">Edit Super Admin</h3>
+                              </div>
+                              <div class="modal-body">
+                              
+                              <form role="form">
+
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter First Name
+                                        </label>
+                                        <input type="text" value="John" class="form-control my_input" id="" required/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter Last Name
+                                        </label>
+                                        <input type="text" value="Doe" class="form-control my_input" id="" required/>
+                                      </div>
+                                    </div>
+                                  </div>
+                                
+                                
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">
+                                      Client Email
+                                    </label>
+                                    <input type="text" value="john@gmail.com" class="form-control my_input" id="" />
+                                  </div>
+                                
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter DOB
+                                        </label>
+                                        <input type="date" value="" class="form-control my_input" id="" required/>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="">
+                                          Enter Mobile
+                                        </label>
+                                        <input type="number" value="6627143047" class="form-control my_input" id="" required/>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn btn-default btn-border" ng-click="editUser()">Submit</button>
+                                        <button class="btn btn-default btn-border" ng-click="cancel()">Cancel</button>
+                                    </div>
+                                  </div>
+
+                              </form>
+
+                              </div>
+                              <div class="modal-footer">
+                                <!--<button type="submit" class="btn btn-default btn-border" ng-click="editUser()">Submit</button>
+                                <button class="btn btn-default btn-border" ng-click="cancel()">Cancel</button>-->
+                              </div>
+                            </script>
+
+                            <span><i class="fa fa-pencil-square-o" ng-click="openSplash($event)" data-options="splash-1 splash-ef-1" data-id="edit"></i></span>
+                          
+
+                            <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+                          </div>
+                          <!-- /tile body -->
+
+                        </div>
+                  <!-- /tile -->
+
+                
+                </li>
+                <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
+
+                  <a href uib-dropdown-toggle class="dropdown-toggle settings"><i class="fa fa-cog"></i></a>
+
+                  <ul class="dropdown-menu pull-right with-arrow animated littleFadeInUp">
+                    <li>
+                      <a href tile-control-toggle>
+                        <span class="minimize"><fa name="angle-down"></fa>&nbsp;&nbsp;&nbsp;Minimize</span>
+                        <span class="expand"><fa name="angle-up"></fa>&nbsp;&nbsp;&nbsp;Expand</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href tile-control-refresh ng-click="ajaxFaker()">
+                        <fa name="refresh"></fa> Refresh
+                      </a>
+                    </li>
+                    <li>
+                      <a href tile-control-fullscreen ng-click="isFullscreen07 = !isFullscreen07">
+                        <fa name="expand"></fa> Fullscreen
+                      </a>
+                    </li>
+                    <li>
+                      <a href tile-control-lightbox>
+                        <fa name="magnet"></fa> Open in Lightbox
+                      </a>
+                    </li>
+
+                  </ul>
+
+                </li>
+             </ul>
+          </div>
+          <!-- /tile header -->
+
+          <!-- tile widget -->
+          <div class="tile-widget">
+
+            <div class="row">
+
+              <div class="col-sm-5">
+                <select class="input-sm form-control inline w-sm">
+                  <option value="1">Delete selected</option>
+                  <option value="2">Export selected</option>
+                </select>
+                <button class="btn btn-sm btn-default">Apply</button>
+              </div>
+
+              <div class="col-sm-3"></div>
+
+              <div class="col-sm-4">
+                <div class="input-group">
+                  <input type="text" class="input-sm form-control" placeholder="Search..." ng-model="searchUserName">
+                  <span class="input-group-btn">
+                    <button class="btn btn-sm btn-default" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- /tile widget -->
+
+          <!-- tile body -->
+          <div class="tile-body p-0">
+
+            <div class="table-responsive">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th style="width:20px;">
+                      <!--<label class="checkbox checkbox-custom checkbox-custom-sm m-0">
+                        <input type="checkbox" ng-model="selectedAll" ng-change="selectAll()"><i></i>
+                      </label>-->
+                    </th>
+                   <th ng-repeat="head in tableHeader">{{head.head}}</th>
+                    <!--<th>Order Name </th>
+                    <th>Received Time</th>
+                    <th>Status</th>
+                    <th>Amount</th>
+                    <th>Action</th>-->
+                   </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="user in allUsersTempData | filter:{firstName:searchUserName}">
+                    <td><label class="checkbox checkbox-custom checkbox-custom-sm m-0"><input type="checkbox" ng-model="user.selected"><i></i></label></td>
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.dob}}</td>
+                    <td>{{user.mobile}}</td>
+                    <!--<td>
+                      <span class="check-toggler" ng-class="{checked: user.checked}" ng-click="user.checked = !user.checked"></span>
+                    </td>-->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+          </div>
+          <!-- /tile body -->
+
+          <!-- tile footer -->
+          <div class="tile-footer dvd dvd-top">
+            <div class="row">
+
+              <div class="col-sm-5 hidden-xs">
+                <select class="input-sm form-control w-sm inline">
+                  <option value="1">Delete selected</option>
+                  <option value="2">Export selected</option>
+                </select>
+                <button class="btn btn-sm btn-default">Apply</button>
+              </div>
+
+              <div class="col-sm-3 text-center">
+                <small class="text-muted">showing 20-30 of 50 items</small>
+              </div>
+
+              <div class="col-sm-4 text-right">
+                <ul class="pagination pagination-sm m-0">
+                  <li><a href><i class="fa fa-chevron-left"></i></a></li>
+                  <li><a href>1</a></li>
+                  <li><a href>2</a></li>
+                  <li><a href>3</a></li>
+                  <li><a href><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- /tile footer -->
+
+        </section>
+        <!-- /tile -->
+
+      </div>
+      <!-- /col -->
+    </div>
+    <!-- /row -->
+
+  </div>
+  <!-- /page content -->
+  
+</div>

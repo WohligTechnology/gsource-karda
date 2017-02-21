@@ -9,6 +9,34 @@
  */
 app
   .controller('DashboardCtrl', function($scope,$http){
+   
+    $scope.page = {
+      title: 'Charts & Graphs',
+      subtitle: 'Place subtitle here...'
+    };
+
+    $scope.basicData = [
+      { year: '10', a: 15,  b: 5  ,c:5 },
+      { year: '20', a: 20,  b: 10  ,c:5 },
+      { year: '30', a: 35,  b: 25  ,c:5  },
+      { year: '40', a: 40, b: 30  ,c:5 }
+    ];
+
+    $scope.donutData = [
+      {label: 'Download Sales', value: 12},
+      {label: 'In-Store Sales', value: 30},
+      {label: 'Mail-Order Sales', value: 20}
+    ];
+
+ $scope.users = [
+      { id:'1' ,project: 'Graphic layout for client', priority: 'High priority' },
+      { id:'2' ,project: 'Make website responsive', priority: 'Low priority' },
+      { id:'3' ,project: 'Clean html/css/js code', priority: 'High priority'},
+      { id:'4' ,project: 'Database optimization', priority: 'Normal priority' },
+      { id:'5' ,project: 'Database Migration', priority: 'Low priority'},
+      { id:'6' ,project: 'Email server backup', priority: 'High priority' }
+      
+    ];
     $scope.page = {
       title: 'Dashboard',
       subtitle: 'Place subtitle here...'
@@ -24,6 +52,18 @@ app
     };
 
     $scope.getUsers();
+  })
+    .controller('SparklineChartCtrl', function($scope){
+
+    $scope.pieChart = {
+      data: [5,10,20,5,5,5],
+      options: {
+        type: 'pie',
+        width: 'auto',
+        height: '250px',
+        sliceColors: ['#22beef','#ff4a42','#a2d200','#ffc100','#ff4a43','#a2d211']
+      }
+    };
   })
 
   .controller('StatisticsChartCtrl', function ($scope) {
@@ -103,6 +143,54 @@ app
           y: 20
         }
       }
+    };
+  })
+
+
+  .controller('OrderedChartCtrl', function ($scope) {
+
+    $scope.dataset = [{
+      data: [[10, 50], [20, 80], [30, 60], [40, 40]],
+      label: 'A'
+    }, {
+      data: [[10, 30], [20, 50], [30, 70], [40, 50]],
+      label: 'B'
+    }, {
+      data: [[10, 40], [20, 60], [30, 90], [40, 60]],
+      label: 'C'
+    }];
+
+    $scope.options = {
+      series: {
+        shadowSize: 0
+      },
+      bars: {
+        show: true,
+        fill: true,
+        lineWidth: 0,
+        fillColor: {
+          colors: [{ opacity:0.6 }, { opacity:0.8}]
+        },
+        order: 1, // order bars
+        colors: ['#428bca','#d9534f','#A40778']
+      },
+      xaxis: {
+        font: {
+          color: '#ccc'
+        }
+      },
+      yaxis: {
+        font: {
+          color: '#ccc'
+        }
+      },
+      grid: {
+        hoverable: true,
+        clickable: true,
+        borderWidth: 0,
+        color: '#ccc'
+      },
+      tooltip: true
     };
   })
 

@@ -1,6 +1,36 @@
 app
   .controller('orderCtrl', function ($scope) {
 
+     $scope.allOrders = [
+      { 
+        name: 'Mark', recievedTime: '2017-01-22 19:25:14', status: 'Unassigned', 
+        amount: '1425', action: ''},
+      { 
+        name: 'Jacob', recievedTime: '2017-01-22 19:25:14', status: 'Assigned', 
+        amount: '7425', action: '' },
+      { 
+        name: 'Mary', recievedTime: '2017-01-22 19:25:14', status: 'QC', 
+        amount: '1925', action: '' },
+      { 
+        name: 'Marv', recievedTime: '2017-01-22 19:25:14', status: 'Completed', 
+        amount: '1425', action: '' },
+      { 
+        name: 'Larry', recievedTime: '2017-01-22 19:25:14', status: 'Assigned', 
+        amount: '1825', action: '' },
+      { 
+        name: 'Jennifer', recievedTime: '2017-01-22 19:25:14', status: 'Assigned', 
+        amount: '9425', action: '' },
+      { 
+        name: 'Sly', recievedTime: '2017-01-22 19:25:14', status: 'QC', 
+        amount: '1455', action: '' },
+      { 
+        name: 'Arnold', recievedTime: '2017-01-22 19:25:14', status: 'Unassigned', 
+        amount: '1427', action: '' },
+      { 
+        name: 'Jack', recievedTime: '2017-01-22 19:25:14', status: 'pending', 
+        amount: '14475', action: '' }
+    ];
+
      $scope.allOrdersStagesData = [
       { 
         name: 'Mark', recievedTime: '2017-01-22 19:25:14', status: 'pending', 
@@ -30,6 +60,7 @@ app
         name: 'Jack', recievedTime: '2017-01-22 19:25:14', status: 'pending', 
         amount: '14475', action: '' }
     ];
+
 
     $scope.selectedAll = false;
 

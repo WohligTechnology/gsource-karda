@@ -11003,6 +11003,17 @@ body {
   .bg-tr-white.lter {
     background-color: rgba(255, 255, 255, 0.4) !important; }
 
+ .accept{
+    background: #16a085;
+    border: #16a085;
+    color:#ffffff;
+}
+.reject{
+    color:#ffffff;
+    background: #ff2d2d;
+    border: #ff2d2d;
+}
+
 .no-bg {
   background-color: transparent !important; }
 

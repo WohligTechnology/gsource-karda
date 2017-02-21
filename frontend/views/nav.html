@@ -12,19 +12,32 @@
           <!--<span class="badge bg-lightred">6</span>-->
           </a>
           <ul>
+            <li ui-sref-active="active"><a ui-sref="app.user.client"><fa name="caret-right"></fa>Super Admin</a></li>
             <li ui-sref-active="active"><a ui-sref="app.user.admin"><fa name="caret-right"></fa>ADMIN</a></li>
-            <li ui-sref-active="active"><a ui-sref="app.user.client"><fa name="caret-right"> </fa>CLIENTS</a></li>
+            <!--<li ui-sref-active="active"><a ui-sref="app.user.client"><fa name="caret-right"> </fa>CLIENTS</a></li>-->
             <li ui-sref-active="active"><a ui-sref="app.user.qc"><fa name="caret-right"></fa>QC</a></li>
             <li ui-sref-active="active"><a ui-sref="app.user.drafter"><fa name="caret-right"></fa>DRAFTERS</a></li>
           </ul>
         </li>
+        <li ui-sref-active="active" ng-class="{'open':$state.includes('app.client')}">
+          <a ui-sref="app.client"><fa name="users"></fa> <span>CLIENT</span> 
+          </a>
+          <ul>
+            <li ui-sref-active="active"><a ui-sref="app.client.requested"><fa name="caret-right"></fa>Requested</a></li>
+            <li ui-sref-active="active"><a ui-sref="app.client.moderated"><fa name="caret-right"></fa>Moderated</a></li>
+          </ul>
+        </li>
+
+
+
 
         <li ui-sref-active="active" ng-class="{'open':$state.includes('app.orders')}">
           <a ui-sref="app.orders"><fa name="list"></fa> <span>ORDERS</span></a>
           <ul>
+            <li ui-sref-active="active"><a ui-sref="app.orders.all-order"><fa name="caret-right"></fa>ALL</a></li>
             <li ui-sref-active="active"><a ui-sref="app.orders.unassigned"><fa name="caret-right"></fa>UNASSIGNED</a></li>
             <li ui-sref-active="active"><a ui-sref="app.orders.assigned"><fa name="caret-right"></fa> ASSIGNED</a></li>
-            <li ui-sref-active="active"><a ui-sref="app.orders.drafted"><fa name="caret-right"></fa> DRAFTED</a></li>
+            <li ui-sref-active="active"><a ui-sref="app.orders.drafted"><fa name="caret-right"></fa> QC</a></li>
             <li ui-sref-active="active"><a ui-sref="app.orders.reassigned"><fa name="caret-right"></fa>REASSIGNED </a></li>
             <li ui-sref-active="active"><a ui-sref="app.orders.completed"><fa name="caret-right"></fa>COMPLETED </a></li>
           </ul>
@@ -40,6 +53,9 @@
         
         <li ui-sref-active="active" ng-class="{'open':$state.includes('app.material')}">
           <a ui-sref="app.material"><fa name="files-o"></fa> <span>REPORTS</span></a>
+        </li>
+         <li ui-sref-active="active" ng-class="{'open':$state.includes('app.material')}">
+          <a ui-sref="app.material"><fa name="question-circle"></fa> <span>ENQUIRY</span></a>
         </li>
 <!--      
          <li ui-sref-active="active" ng-class="{'open':$state.includes('app.ui')}">
@@ -60,9 +76,9 @@
             <li ui-sref-active="active"><a ui-sref="app.ui.masonry"><fa name="caret-right"></fa> {{ 'Menu.MASONRY' | translate }} <span class="label label-success">new</span></a></li>
             <li ui-sref-active="active"><a ui-sref="app.ui.dragula"><fa name="caret-right"></fa> {{ 'Menu.DRAGULA' | translate }} <span class="label label-success">new</span></a></li>
           </ul>
-        </li>
+        </li>-->
         
-        <li ui-sref-active="active" ng-class="{'open':$state.includes('app.material')}">
+        <!--<li ui-sref-active="active" ng-class="{'open':$state.includes('app.material')}">
           <a ui-sref="app.material"><fa name="puzzle-piece"></fa> <span>{{ 'Menu.MATERIAL_UI' | translate }}</span></a>
           <ul>
             <li ui-sref-active="active"><a ui-sref="app.material.autocomplete"><fa name="caret-right"></fa> Autocomplete</a></li>
@@ -95,9 +111,9 @@
             <li ui-sref-active="active"><a ui-sref="app.material.tooltip"><fa name="caret-right"></fa> Tooltip</a></li>
             <li ui-sref-active="active"><a ui-sref="app.material.whiteframe"><fa name="caret-right"></fa> Whiteframe</a></li>
           </ul>
-        </li>
+        </li>-->
         
-        <li ui-sref-active="active" ng-class="{'open':$state.includes('app.tables')}">
+        <!--<li ui-sref-active="active" ng-class="{'open':$state.includes('app.tables')}">
           <a ui-sref="app.tables"><fa name="table"></fa> <span>{{ 'Menu.TABLES' | translate }}</span></a>
           <ul>
             <li ui-sref-active="active"><a ui-sref="app.tables.bootstrap"><fa name="caret-right"></fa> {{ 'Menu.BOOTSTRAP_TABLES' | translate }}</a></li>
@@ -108,11 +124,13 @@
             <li ui-sref-active="active"><a ui-sref="app.tables.footable"><fa name="caret-right"></fa> {{ 'Menu.FOOTABLE' | translate }}</a></li>
           </ul>
         </li>-->
+         <li ui-sref-active="active"><a ui-sref="app.charts"><fa name="bar-chart-o"></fa> <span>{{ 'Menu.CHARTS_GRAPHS' | translate }}</span></a></li>
+
 
       </ul>
     </uib-accordion-group>
-
-    <!--<uib-accordion-group is-open="status.isSecondOpen" class="charts">
+<!--
+    <uib-accordion-group is-open="status.isSecondOpen" class="charts">
       <uib-accordion-heading>
         Orders Summary <i class="pull-right fa" ng-class="{'fa-angle-up': status.isSecondOpen, 'fa-angle-down': !status.isSecondOpen}"></i>
       </uib-accordion-heading>
@@ -141,9 +159,9 @@
 
       </div>
 
-    </uib-accordion-group>
+    </uib-accordion-group>-->
 
-    <uib-accordion-group is-open="status.isThirdOpen" class="settings">
+    <!--<uib-accordion-group is-open="status.isThirdOpen" class="settings">
       <uib-accordion-heading>
         General Settings <i class="pull-right fa" ng-class="{'fa-angle-up': status.isThirdOpen, 'fa-angle-down': !status.isThirdOpen}"></i>
       </uib-accordion-heading>
